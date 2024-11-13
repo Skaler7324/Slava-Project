@@ -154,8 +154,7 @@ body {
   padding-inline: 15px;
 }
 
-.navbar,
-.input-wrapper {
+.navbar {
   display: none;
 }
 
@@ -179,6 +178,10 @@ body {
   color: var(--emerald);
 }
 
+.nav-wrapper .logo {
+  text-align: center;
+}
+
 .nav-wrapper .container {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +196,7 @@ body {
   min-width: 100%;
 }
 
-.header-action ,
+.header-action,
 .search-wrapper {
   display: flex;
   min-width: 70%;
@@ -210,10 +213,93 @@ body {
   transition: var(--transition-1);
 }
 
-.nav-open-btn:is(:hover, :focus) {background-color: var(--green-pigment);}
+.nav-open-btn:is(:hover, :focus) {
+  background-color: var(--green-pigment);
+}
 
 .header-action-btn {
   position: relative;
   background-color: var(--mint-cream);
-  color: var(--);
+  color: var(--space-cadet);
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.header-action-btn:is(:hover, :focus):not(:focus-visible) {
+  outline: 2px solid var(--emerald);
+}
+
+.btn-badge {
+  position: absolute;
+  background-color: var(--emerald);
+  color: var(--white);
+  font-size: var(--fs-9);
+  font-weight: var(--fw-600);
+  padding: 3px 7px;
+  border-radius: 50px;
+  top: -5px;
+  right: -5px;
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-wrapper .active .search-icon,
+.search-wrapper .close-icon {
+  display: none;
+}
+
+.search-wrapper .search-icon,
+.search-wrapper .active .close-icon {
+  display: block;
+}
+
+.input-wrapper {
+  position: absolute;
+  background-color: var(--white);
+  top: calc(100% + 25px);
+  left: 0;
+  width: 260px;
+  transform: translateX(var(--translatex, -85px)) scale(var(--scale, 0.5));
+  box-shadow: var(--shadow-1);
+  padding: 20px;
+  border-radius: var(--radius-4);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.15s var(--cubic-in);
+}
+
+.search-wrapper .active .input-wrapper {
+  visibility: visible;
+  opacity: 1;
+  --scale: 1;
+  transition: 0.35s var(--cubic-out);
+}
+
+.search-input {
+  color: var(--eerie-black);
+  font-size: var(--fs-6);
+  border: 1px solid var(--platinum);
+  padding: 15px;
+  padding-inline-end: 40px;
+  outline: none;
+}
+
+.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-input:focus {
+  border-color: var(--emerald);
+}
+
+.search-submit {
+  color: var(--space-cadet);
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 33px;
 }
