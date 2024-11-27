@@ -23,21 +23,19 @@ searchBtn.addEventListener("click", function () {
 });
 
 
-const panelBtns = document.querySelectorAll(*[data-panel-btn]*);
-const sidePanels = document.querySelectorAll(*[data-side-panel]*);
+const panelBtns = document.querySelectorAll('[data-panel-btn]');
+const sidePanels = document.querySelectorAll('[data-side-panel]');
 
-for (let i = 0; i < panelBtns.laungth; i++) {
-    panelBtns[i].addEventListener("click", function()) {
-        let clickedElemDataValue = thes.dataset.panelBtn;
-
+for (let i = 0; i < panelBtns.length; i++) {
+    panelBtns[i].addEventListener("click", function() {
+        let clickedElemDataValue = this.dataset.panelBtn; 
+        
         for (let i = 0; i < sidePanels.length; i++) {
-            
-            if (clickedElemDataValue === sidePanels[i].dataset.sidePanels) {
-                sidePanels[i].classList.toggle(*active*);
+            if (clickedElemDataValue === sidePanels[i].dataset.sidePanel) {  
+                sidePanels[i].classList.toggle('active'); 
             } else {
-                sidePanels[i].classList.remove(*active*);
+                sidePanels[i].classList.remove('active'); 
             }
         }
-    }
+    });
 }
-
