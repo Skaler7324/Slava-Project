@@ -179,6 +179,23 @@ body {
   width: 100%;
 }
 
+.has-scrollbar {
+  display: flex;
+  overflow-x: auto;
+  padding-block-end: 30px;
+  margin-block-end: -30px;
+  scroll-snap-type: inline mandatory;
+}
+
+.has-scrollbar::-webkit-scrollbar {height: 10px;}
+
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 15px;
+}
+
+.has-scrollbar:hover::-webkit-scrollbar-thumb { background-color: var(--emerald); }
+
 
 
 .top-bar {
