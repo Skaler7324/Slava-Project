@@ -228,6 +228,87 @@ body {
   font-size: 1.4rem;
 }
 
+.product-card {
+  background-color: var(--mint-cream);
+  padding: 30px 20px;
+  text-align: center;
+  outline: 2px solid transparent;
+  transition: var(--transition-2);
+}
+
+.product-card:is(:hover, :focus-within) { outline-color: var(--emerald); }
+
+.product-card .card-banner {
+  position: relative;
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 20px;
+}
+
+.product-card .card-banner img { transition: var(--transition-2); }
+
+.product-card:is(:hover, :focus-within) .card-banner img { opacity: 0.6; }
+
+.product-card .btn-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-card .product-btn {
+  position: relative;
+  background-color: var(--emerald);
+  font-size: var(--fs, 2rem);
+  color: var(--white);
+  padding: var(--padding, 12px);
+  border-radius: 50%;
+  opacity: 0;
+  transition: var(--transition-2);
+}
+
+.product-card .product-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--black_90);
+  border-radius: var(--radius-4);
+  font-size: var(--fs-7);
+  min-width: max-content;
+  padding: 4px 12px;
+  pointer-events: none;
+  opacity: var(--opacity, 0);
+  transition: var(--transition-2);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border: 5px solid transparent;
+  border-bottom-color: var(--black_90);
+  border-right-color: var(--black_90);
+}
+
+.product-card:is(:hover, :focus-within) .product-btn {opacity: 1;}
+
+.product-card .product-btn:is(:hover, :focus) {background-color: var(--gunmetal-2); }
+
+.product-card .product-btn:is(:hover, :focus) .tooltip {--opacity: 1; }
+
+
+
 
 
 .top-bar {
