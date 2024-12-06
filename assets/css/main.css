@@ -307,9 +307,39 @@ body {
 
 .product-card .product-btn:is(:hover, :focus) .tooltip {--opacity: 1; }
 
+.product-card .rating-wrapper {
+  margin-block-end: 10px;
+}
 
+.product-card .card-title {
+  color: var(--russian-violet);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-5);
+  margin-block-end: 10px;
+}
 
+.product-card .card-title > a {transition: var(--transition-2);}
 
+.product-card .card-title > a:is(:hover, :focus) {color: var(--emerald);}
+
+.product-card .price-wrapper {
+  font-size: var(--fs-6);
+  margin-block-end: 15px;
+}
+
+.product-card .price-wrapper .del {
+  color: var(--battleship-gray);
+}
+
+.product-card .price-wrapper .price {
+  color: var(--emerald);
+  margin-inline-start: 5px;
+}
+
+.product-card .btn {
+  margin-inline: auto;
+  --padding: 12px 18px;
+}
 
 .top-bar {
   background-color: var(--gunmetal-2);
