@@ -307,3 +307,240 @@
 }
 
 
+@media (min-width: 480px) {
+
+  .hero {
+    min-height: 550px;
+    display: grid;
+    align-items: center;
+  }
+
+  .service-item { justify-content: center; }
+
+  .offers-card {
+    text-align: left;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 30px 40px;
+  }
+
+  .offers-card .card-banner {
+    margin-block-end: 0;
+    order: 1;
+  }
+
+  .offers-card .btn { margin-inline: 0; }
+
+  .product .grid-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .product-card .card-banner img { width: 100%; }
+
+  .partner-item { min-width: 33.33%; }
+
+  .newsletter :is(.section-subtitle, .input-email) { font-size: 2rem; }
+
+  .newsletter .section-title { --fs-3: 2.4rem; }
+
+  .newsletter .section-title .span {
+    font-size: inherit;
+    display: inline-block;
+  }
+
+  .newsletter-form { position: relative; }
+
+  .newsletter .input-email {
+    padding: 25px 30px;
+    padding-inline-end: 160px;
+  }
+
+  .newsletter .btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+    --padding: 0 30px;
+  }
+
+}
+
+@media (min-width: 569px) {
+
+  .hero {
+    background-image: url("../images/hero-left-bg.png"), url("../images/hero-right-bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top;
+  }
+
+  .hero-title { --fs-1: 3.5rem; }
+
+  .service-list { grid-template-columns: 1fr 1fr; }
+
+  .cta .section-subtitle { --fs-3: 3rem; }
+
+  .cta .section-title { --fs-1: 3.5rem; }
+
+  .cta-text { --fs-4: 2rem; }
+
+  .top-product-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+  }
+
+  .top-product-card .card-banner {
+    margin-block-end: 0;
+    margin-inline: 0;
+  }
+
+  .top-product-card .rating-wrapper { --justify-content: flex-start; }
+
+  .top-product-card .btn { margin-inline: 0; }
+
+}
+
+@media (min-width: 768px) {
+
+  :is(.hero, .cta, .blog, .newsletter) .btn {
+    --fs: 1.8rem;
+    --fw: var(--fw-700);
+    --padding: 18px 50px;
+  }
+
+  .hero-title { --fs-1: 4.5rem; }
+
+  .hero-title .span { font-size: 5.8rem; }
+
+  .hero-banner { display: block; }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+  }
+
+  .service-list { grid-template-columns: repeat(3, 1fr); }
+
+  .offers-list { gap: 30px; }
+
+  .offers-item {
+    min-width: calc(50% - 15px);
+    margin-inline: 0;
+  }
+
+  .cta { padding-block: 80px; }
+
+  .top-product-list { grid-template-columns: 1fr 1fr; }
+
+  .top-product-card {
+    justify-content: flex-start;
+    gap: 15px;
+    height: 100%;
+  }
+
+  .top-product-card .card-banner { min-width: 110px; }
+
+  .partner-item { min-width: 25%; }
+
+  .testi-item { min-width: 50%; }
+
+  .blog-list {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+  }
+
+  .newsletter-card {
+    padding-inline: 25px;
+    background-image: url("../images/partner-left-bg.png"), url("../images/partner-right-bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .hero-title { --fs-1: 5rem; }
+
+  .service-item { gap: 20px; }
+
+  .item-icon { padding: 25px; }
+
+  .item-title { --fs-4: 2.7rem; }
+
+  .offers-card { padding-block: 70px; }
+
+  .offers-card .card-title { --fs-4: 2.3rem; }
+
+  .offers-card .btn {
+    --fs-8: 1.5rem;
+    --padding: 15px 25px;
+  }
+
+  .filter-btn {
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .filter-btn > img { transform: scale(1.5); }
+
+  .product .grid-list { grid-template-columns: repeat(4, 1fr); }
+
+  .cta { padding-block: 120px; }
+
+  .top-product-list { grid-template-columns: repeat(3, 1fr); }
+
+
+  .partner-item { min-width: 20%; }
+
+
+  .testimonials .has-scrollbar { gap: 30px; }
+
+  .testi-item {
+    min-width: calc(33.33% - 20px);
+    margin-inline: 0;
+  }
+
+
+  .blog-list { grid-template-columns: repeat(3, 1fr); }
+
+  .newsletter-card > * {
+    max-width: 450px;
+    margin-inline: auto;
+  }
+
+  .newsletter-card { padding-block: 150px; }
+
+}
+
+@media (min-width: 1200px) {
+
+
+  .hero-title { --fs-1: 5.8rem; }
+
+  .hero .container { grid-template-columns: 1fr 1fr; }
+
+  .offers-card .card-title {
+    --fs-4: 2.8rem;
+    margin-block: 20px;
+  }
+
+
+  .partner {
+    padding-block: 150px;
+    background-image: url("../images/partner-left-bg.png"), url("../images/partner-right-bg.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, top right;
+  }
+
+  .partner-item { min-width: 16.66%; }
+
+}
+
+
